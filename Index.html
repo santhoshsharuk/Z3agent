@@ -65,7 +65,7 @@
                 <!-- <img src="assets/images/logo.png" alt="Z3Connect Logo" class="h-8 sm:h-10"> -->
             </a>
             <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-darkText focus:outline-none">
+                <button id="mobile-menu-button" aria-label="Open Menu" class="text-darkText focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -310,16 +310,16 @@
     </footer>
 
     <!-- Chatbot Start -->
-    <div id="chatbot-container" class="fixed bottom-5 right-5 z-50">
-        <button id="chatbot-bubble" class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none">
+    <div id="chatbot-container" class="fixed bottom-5 right-5 z-[9999]">
+        <button id="chatbot-bubble" aria-label="Open Chat" class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full shadow-xl hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
                 <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.892 8.892 0 01-2.647-.472c-.412-.102-.82-.296-1.175-.552l-1.38.46a.5.5 0 01-.633-.633l.46-1.38c-.256-.355-.45-.763-.552-1.175A8.892 8.892 0 012 10c0-4.418 3.582-8 8-8s8 3.582 8 8zm-2.929-2.929A4.982 4.982 0 0010 6a4.982 4.982 0 00-5.071 1.071A4.992 4.992 0 003 10c0 .995.293 1.92.805 2.695A4.992 4.992 0 0010 14a4.992 4.992 0 005.195-2.305A4.992 4.992 0 0017 10a4.982 4.982 0 00-1.071-3.071zM9 9a1 1 0 011-1h0a1 1 0 011 1v2a1 1 0 01-1 1h0a1 1 0 01-1-1V9zm2-1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
             </svg>
         </button>
-        <div id="chatbot-window" class="hidden fixed bottom-20 right-5 w-80 sm:w-96 bg-white rounded-lg shadow-xl border border-gray-300 flex flex-col" style="height: 500px;">
-            <div class="bg-primary text-white p-3 flex justify-between items-center rounded-t-lg">
+        <div id="chatbot-window" class="hidden fixed bottom-24 right-5 w-[calc(100vw-40px)] max-w-sm sm:w-96 bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col" style="height: clamp(400px, 70vh, 550px);">
+            <div class="bg-primary text-white p-3 flex justify-between items-center rounded-t-xl">
                 <h3 class="font-semibold text-lg">Z3Connect Help</h3>
-                <button id="chatbot-close" class="text-white hover:text-gray-200 focus:outline-none">
+                <button id="chatbot-close" aria-label="Close Chat" class="text-white hover:text-gray-200 focus:outline-none">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
@@ -327,14 +327,14 @@
             </div>
             <div id="chatbot-messages" class="flex-1 p-4 space-y-3 overflow-y-auto">
                 <div class="flex">
-                    <div class="bg-gray-200 text-darkText p-3 rounded-lg max-w-xs">
+                    <div class="bg-gray-200 text-darkText p-3 rounded-lg max-w-[85%] break-words">
                         Hi there! How can I help you today? Ask me about our services, application process, or commissions.
                     </div>
                 </div>
             </div>
-            <div class="p-3 border-t border-gray-200 flex items-center bg-gray-50 rounded-b-lg">
-                <input type="text" id="chatbot-input" placeholder="Ask a question..." class="flex-1 p-2 border border-gray-300 rounded-l-md focus:ring-primary focus:border-primary outline-none">
-                <button id="chatbot-send" class="bg-primary text-white p-2 rounded-r-md hover:bg-blue-700 transition-colors">
+            <div class="p-3 border-t border-gray-200 flex items-center bg-gray-50 rounded-b-xl">
+                <input type="text" id="chatbot-input" placeholder="Ask a question..." class="flex-1 p-2.5 border border-gray-300 rounded-l-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm">
+                <button id="chatbot-send" aria-label="Send Message" class="bg-primary text-white p-2.5 rounded-r-md hover:bg-blue-700 transition-colors">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
                 </button>
             </div>
@@ -410,16 +410,19 @@
             "bye": "Goodbye! Feel free to reach out if you have more questions.",
             "thank you": "You're welcome! Let me know if there's anything else.",
             "thanks": "You're welcome!",
-            // Add more specific Q&A pairs below
             "what is z3connect": "Z3Connect is a company that provides innovative digital solutions to businesses and individuals.",
-            "payout": "Commissions are typically paid out on a [mention your payout cycle, e.g., bi-weekly or monthly] basis via bank transfer or UPI.",
+            "payout": "Commissions are typically paid out on a bi-weekly or monthly basis via bank transfer or UPI. This will be clarified during onboarding.",
             "support": "We offer ongoing support to our agents through WhatsApp and email, along with comprehensive training materials.",
             "requirements": "The main requirements are basic communication skills, access to a smartphone/laptop, and an internet connection. No specific educational background is mandatory, but enthusiasm is key!"
         };
         // --- END OF Q&A PAIRS CUSTOMIZATION ---
 
+        function initializeChatbot() {
+            if (!chatbotBubble || !chatbotWindow || !chatbotClose || !chatbotMessages || !chatbotInput || !chatbotSend) {
+                console.error("One or more chatbot elements are missing from the DOM. Check IDs.");
+                return;
+            }
 
-        if (chatbotBubble && chatbotWindow && chatbotClose && chatbotMessages && chatbotInput && chatbotSend) {
             chatbotBubble.addEventListener('click', () => {
                 chatbotWindow.classList.toggle('hidden');
                 if (!chatbotWindow.classList.contains('hidden')) {
@@ -431,74 +434,75 @@
                 chatbotWindow.classList.add('hidden');
             });
 
-            function addMessageToChat(message, sender = 'user') {
-                const messageDiv = document.createElement('div');
-                messageDiv.classList.add('flex', 'mb-2');
-                if (sender === 'user') {
-                    messageDiv.classList.add('justify-end');
-                    messageDiv.innerHTML = `<div class="bg-primary text-white p-3 rounded-lg max-w-xs break-words">${escapeHTML(message)}</div>`;
-                } else { // bot
-                    messageDiv.innerHTML = `<div class="bg-gray-200 text-darkText p-3 rounded-lg max-w-xs break-words">${escapeHTML(message)}</div>`;
-                }
-                chatbotMessages.appendChild(messageDiv);
-                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-            }
-            
-            // Simple HTML escaping function
-            function escapeHTML(str) {
-                return str.replace(/[&<>"']/g, function (match) {
-                    return {
-                        '&': '&',
-                        '<': '<',
-                        '>': '>',
-                        '"': '"',
-                        "'": '''
-                    }[match];
-                });
-            }
-
-            function getBotResponse(userInput) {
-                const lowerInput = userInput.toLowerCase().trim();
-                for (const question in qaPairs) {
-                    // More flexible matching: check if any part of the question keyword is in the user input
-                    const keywords = question.split(" ");
-                    let matchCount = 0;
-                    keywords.forEach(keyword => {
-                        if (lowerInput.includes(keyword)) {
-                            matchCount++;
-                        }
-                    });
-                    // Require a certain threshold of keyword matches if question has multiple words
-                    if (keywords.length > 1 && matchCount >= Math.ceil(keywords.length / 2)) {
-                         return qaPairs[question];
-                    } else if (keywords.length === 1 && lowerInput.includes(question)) {
-                         return qaPairs[question];
-                    }
-                }
-                return "I'm sorry, I don't have an answer for that right now. Please try asking in a different way or contact us via WhatsApp at 8110960489 for more specific queries.";
-            }
-
-            function handleSend() {
-                const userInput = chatbotInput.value.trim();
-                if (userInput) {
-                    addMessageToChat(userInput, 'user');
-                    const botResponse = getBotResponse(userInput);
-                    setTimeout(() => {
-                        addMessageToChat(botResponse, 'bot');
-                    }, 500);
-                    chatbotInput.value = '';
-                }
-            }
-
             chatbotSend.addEventListener('click', handleSend);
             chatbotInput.addEventListener('keypress', (event) => {
                 if (event.key === 'Enter') {
                     handleSend();
                 }
             });
-        } else {
-            console.error("Chatbot elements not found. Check IDs.");
         }
+
+        function addMessageToChat(message, sender = 'user') {
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('flex', 'mb-3');
+            if (sender === 'user') {
+                messageDiv.classList.add('justify-end');
+                messageDiv.innerHTML = `<div class="bg-primary text-white py-2 px-4 rounded-xl max-w-[85%] break-words text-sm shadow">${escapeHTML(message)}</div>`;
+            } else {
+                messageDiv.innerHTML = `<div class="bg-gray-200 text-darkText py-2 px-4 rounded-xl max-w-[85%] break-words text-sm shadow">${escapeHTML(message)}</div>`;
+            }
+            chatbotMessages.appendChild(messageDiv);
+            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+        }
+        
+        function escapeHTML(str) {
+            if (typeof str !== 'string') return '';
+            return str.replace(/[&<>"']/g, function (match) {
+                return {
+                    '&': '&', '<': '<', '>': '>', '"': '"', "'": '''
+                }[match];
+            });
+        }
+
+        function getBotResponse(userInput) {
+            const lowerInput = userInput.toLowerCase().trim();
+            if (!lowerInput) return "Please type a question.";
+
+            for (const question in qaPairs) {
+                if (lowerInput === question.toLowerCase()) {
+                    return qaPairs[question];
+                }
+            }
+            for (const question in qaPairs) {
+                const keywords = question.toLowerCase().split(" ");
+                let allKeywordsMatch = true;
+                if (keywords.length > 0) {
+                    for (const keyword of keywords) {
+                        if (!lowerInput.includes(keyword)) {
+                            allKeywordsMatch = false;
+                            break;
+                        }
+                    }
+                    if (allKeywordsMatch) return qaPairs[question];
+                }
+            }
+            return "I'm sorry, I don't have an answer for that. Please try rephrasing or contact us via WhatsApp at 8110960489.";
+        }
+
+        function handleSend() {
+            const userInput = chatbotInput.value.trim();
+            if (userInput) {
+                addMessageToChat(userInput, 'user');
+                const botResponse = getBotResponse(userInput);
+                setTimeout(() => {
+                    addMessageToChat(botResponse, 'bot');
+                }, 600);
+                chatbotInput.value = '';
+                chatbotInput.focus();
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', initializeChatbot);
 
     </script>
 
