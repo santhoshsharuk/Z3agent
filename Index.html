@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Z3Connect Commission Agent Program</title>
+    <title>Z3Connect Commission Agent Program - Mobile Test</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -39,7 +39,7 @@
             background-position: center;
             background-repeat: no-repeat;
         }
-        /* Chatbot scrollbar styling (optional) */
+        /* Chatbot scrollbar styling (optional) - Kept for when original chatbot is restored */
         #chatbot-messages::-webkit-scrollbar {
             width: 6px;
         }
@@ -58,11 +58,10 @@
 <body class="bg-gray-50 text-darkText leading-relaxed tracking-tight">
 
     <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-40"> <!-- z-index lower than chatbot -->
+    <header class="bg-white shadow-lg sticky top-0 z-40">
         <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl sm:text-3xl font-bold text-primary hover:text-blue-700 transition-colors">
                 Z3Connect
-                <!-- <img src="assets/images/logo.png" alt="Z3Connect Logo" class="h-8 sm:h-10"> -->
             </a>
             <div class="md:hidden">
                 <button id="mobile-menu-button" aria-label="Open Menu" class="text-darkText focus:outline-none">
@@ -309,38 +308,14 @@
         </div>
     </footer>
 
-    <!-- Chatbot Start -->
-    <div id="chatbot-container" class="fixed bottom-5 right-5 z-[9999]">
-        <button id="chatbot-bubble" aria-label="Open Chat" class="bg-primary text-white w-16 h-16 flex items-center justify-center rounded-full shadow-xl hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.892 8.892 0 01-2.647-.472c-.412-.102-.82-.296-1.175-.552l-1.38.46a.5.5 0 01-.633-.633l.46-1.38c-.256-.355-.45-.763-.552-1.175A8.892 8.892 0 012 10c0-4.418 3.582-8 8-8s8 3.582 8 8zm-2.929-2.929A4.982 4.982 0 0010 6a4.982 4.982 0 00-5.071 1.071A4.992 4.992 0 003 10c0 .995.293 1.92.805 2.695A4.992 4.992 0 0010 14a4.992 4.992 0 005.195-2.305A4.992 4.992 0 0017 10a4.982 4.982 0 00-1.071-3.071zM9 9a1 1 0 011-1h0a1 1 0 011 1v2a1 1 0 01-1 1h0a1 1 0 01-1-1V9zm2-1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
-            </svg>
+    <!-- Chatbot Test Start -->
+    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 99999;">
+        <button id="test-chatbot-bubble" style="background-color: red; color: white; padding: 20px; border-radius: 50%; border: none; font-size: 16px; cursor: pointer; width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; text-align: center;">
+            TEST CHAT
         </button>
-        <div id="chatbot-window" class="hidden fixed bottom-24 right-5 w-[calc(100vw-40px)] max-w-sm sm:w-96 bg-white rounded-xl shadow-2xl border border-gray-200 flex flex-col" style="height: clamp(400px, 70vh, 550px);">
-            <div class="bg-primary text-white p-3 flex justify-between items-center rounded-t-xl">
-                <h3 class="font-semibold text-lg">Z3Connect Help</h3>
-                <button id="chatbot-close" aria-label="Close Chat" class="text-white hover:text-gray-200 focus:outline-none">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-            <div id="chatbot-messages" class="flex-1 p-4 space-y-3 overflow-y-auto">
-                <div class="flex">
-                    <div class="bg-gray-200 text-darkText p-3 rounded-lg max-w-[85%] break-words">
-                        Hi there! How can I help you today? Ask me about our services, application process, or commissions.
-                    </div>
-                </div>
-            </div>
-            <div class="p-3 border-t border-gray-200 flex items-center bg-gray-50 rounded-b-xl">
-                <input type="text" id="chatbot-input" placeholder="Ask a question..." class="flex-1 p-2.5 border border-gray-300 rounded-l-md focus:ring-2 focus:ring-primary focus:border-transparent outline-none text-sm">
-                <button id="chatbot-send" aria-label="Send Message" class="bg-primary text-white p-2.5 rounded-r-md hover:bg-blue-700 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
-                </button>
-            </div>
-        </div>
     </div>
-    <!-- Chatbot End -->
+    <!-- Chatbot Test End -->
+
 
     <script>
         // Set current year in footer
@@ -383,127 +358,35 @@
             });
         });
 
-        // Chatbot Logic
-        const chatbotBubble = document.getElementById('chatbot-bubble');
-        const chatbotWindow = document.getElementById('chatbot-window');
-        const chatbotClose = document.getElementById('chatbot-close');
-        const chatbotMessages = document.getElementById('chatbot-messages');
-        const chatbotInput = document.getElementById('chatbot-input');
-        const chatbotSend = document.getElementById('chatbot-send');
+        // Original Chatbot Logic (kept for when test is done, but won't fully work with current test HTML)
+        // const chatbotBubble = document.getElementById('chatbot-bubble');
+        // const chatbotWindow = document.getElementById('chatbot-window');
+        // const chatbotClose = document.getElementById('chatbot-close');
+        // const chatbotMessages = document.getElementById('chatbot-messages');
+        // const chatbotInput = document.getElementById('chatbot-input');
+        // const chatbotSend = document.getElementById('chatbot-send');
+        // const qaPairs = { /* ... your Q&A pairs ... */ };
+        // function initializeChatbot() { /* ... your chatbot init logic ... */ }
+        // function addMessageToChat(message, sender = 'user') { /* ... */ }
+        // function escapeHTML(str) { /* ... */ }
+        // function getBotResponse(userInput) { /* ... */ }
+        // function handleSend() { /* ... */ }
+        // document.addEventListener('DOMContentLoaded', initializeChatbot); // This would call the original
+    </script>
 
-        // --- IMPORTANT: CUSTOMIZE YOUR Q&A PAIRS HERE ---
-        const qaPairs = {
-            "hello": "Hi there! How can I assist you with Z3Connect?",
-            "hi": "Hello! What can I help you with regarding our agent program?",
-            "what services": "We offer a range of digital solutions including website development, web applications, e-commerce platforms, custom software, AI chatbots, and more. Agents help promote these.",
-            "services": "Our agents promote digital services like websites, web apps, custom software, and AI solutions.",
-            "apply": "You can apply by clicking the 'Apply Now' or 'Apply to be a Z3Connect Agent' button on this page. It will take you to our application form.",
-            "how to apply": "Simply click any 'Apply Now' button on the page to access the application form.",
-            "commission": "Agents earn a high commission based on the project size and performance. Specific rates are discussed during onboarding.",
-            "salary": "This is a commission-based role, so there's no fixed salary. Your earnings depend on your sales performance.",
-            "experience": "No prior sales experience is necessary! We provide training and support materials. Basic communication skills are what you need.",
-            "training": "Yes, we provide complete training materials (like PDFs and guidance) and ongoing support to our agents.",
-            "contact": "You can contact us via WhatsApp at 8110960489 for any further questions.",
-            "location": "This is a fully remote opportunity. You can work from anywhere!",
-            "remote": "Yes, this is a 100% remote position.",
-            "hours": "You can set your own flexible working hours. It's a part-time opportunity.",
-            "bye": "Goodbye! Feel free to reach out if you have more questions.",
-            "thank you": "You're welcome! Let me know if there's anything else.",
-            "thanks": "You're welcome!",
-            "what is z3connect": "Z3Connect is a company that provides innovative digital solutions to businesses and individuals.",
-            "payout": "Commissions are typically paid out on a bi-weekly or monthly basis via bank transfer or UPI. This will be clarified during onboarding.",
-            "support": "We offer ongoing support to our agents through WhatsApp and email, along with comprehensive training materials.",
-            "requirements": "The main requirements are basic communication skills, access to a smartphone/laptop, and an internet connection. No specific educational background is mandatory, but enthusiasm is key!"
-        };
-        // --- END OF Q&A PAIRS CUSTOMIZATION ---
-
-        function initializeChatbot() {
-            if (!chatbotBubble || !chatbotWindow || !chatbotClose || !chatbotMessages || !chatbotInput || !chatbotSend) {
-                console.error("One or more chatbot elements are missing from the DOM. Check IDs.");
-                return;
-            }
-
-            chatbotBubble.addEventListener('click', () => {
-                chatbotWindow.classList.toggle('hidden');
-                if (!chatbotWindow.classList.contains('hidden')) {
-                    chatbotInput.focus();
-                }
-            });
-
-            chatbotClose.addEventListener('click', () => {
-                chatbotWindow.classList.add('hidden');
-            });
-
-            chatbotSend.addEventListener('click', handleSend);
-            chatbotInput.addEventListener('keypress', (event) => {
-                if (event.key === 'Enter') {
-                    handleSend();
-                }
-            });
-        }
-
-        function addMessageToChat(message, sender = 'user') {
-            const messageDiv = document.createElement('div');
-            messageDiv.classList.add('flex', 'mb-3');
-            if (sender === 'user') {
-                messageDiv.classList.add('justify-end');
-                messageDiv.innerHTML = `<div class="bg-primary text-white py-2 px-4 rounded-xl max-w-[85%] break-words text-sm shadow">${escapeHTML(message)}</div>`;
+    <!-- NEW SIMPLIFIED TEST SCRIPT FOR THE RED BUTTON -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const testBubble = document.getElementById('test-chatbot-bubble');
+            if (testBubble) {
+                testBubble.addEventListener('click', function() {
+                    alert('Mobile Test Bubble Clicked! If you see this, the basic click works.');
+                });
+                console.log('Test bubble event listener attached.');
             } else {
-                messageDiv.innerHTML = `<div class="bg-gray-200 text-darkText py-2 px-4 rounded-xl max-w-[85%] break-words text-sm shadow">${escapeHTML(message)}</div>`;
+                console.error('Test bubble (test-chatbot-bubble) NOT found! Check ID.');
             }
-            chatbotMessages.appendChild(messageDiv);
-            chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
-        }
-        
-        function escapeHTML(str) {
-            if (typeof str !== 'string') return '';
-            return str.replace(/[&<>"']/g, function (match) {
-                return {
-                    '&': '&', '<': '<', '>': '>', '"': '"', "'": '''
-                }[match];
-            });
-        }
-
-        function getBotResponse(userInput) {
-            const lowerInput = userInput.toLowerCase().trim();
-            if (!lowerInput) return "Please type a question.";
-
-            for (const question in qaPairs) {
-                if (lowerInput === question.toLowerCase()) {
-                    return qaPairs[question];
-                }
-            }
-            for (const question in qaPairs) {
-                const keywords = question.toLowerCase().split(" ");
-                let allKeywordsMatch = true;
-                if (keywords.length > 0) {
-                    for (const keyword of keywords) {
-                        if (!lowerInput.includes(keyword)) {
-                            allKeywordsMatch = false;
-                            break;
-                        }
-                    }
-                    if (allKeywordsMatch) return qaPairs[question];
-                }
-            }
-            return "I'm sorry, I don't have an answer for that. Please try rephrasing or contact us via WhatsApp at 8110960489.";
-        }
-
-        function handleSend() {
-            const userInput = chatbotInput.value.trim();
-            if (userInput) {
-                addMessageToChat(userInput, 'user');
-                const botResponse = getBotResponse(userInput);
-                setTimeout(() => {
-                    addMessageToChat(botResponse, 'bot');
-                }, 600);
-                chatbotInput.value = '';
-                chatbotInput.focus();
-            }
-        }
-        
-        document.addEventListener('DOMContentLoaded', initializeChatbot);
-
+        });
     </script>
 
 </body>
