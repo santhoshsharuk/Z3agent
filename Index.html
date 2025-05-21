@@ -25,7 +25,7 @@
           }
         }
       </script>
-    <!-- Example Google Font Import (Inter) - Place before Tailwind script if possible or ensure it loads -->
+    <!-- Example Google Font Import (Inter) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,9 +33,8 @@
     <style>
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; }
-        /* Custom class for hero background image */
         .hero-bg-image {
-            background-image: url('https://via.placeholder.com/1920x800/cccccc/888888?text=Dynamic+Tech+Background'); /* Replace with your image */
+            background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHRlY2hub2xvZ3klMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1920&q=80'); /* Replace with your image */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -47,18 +46,15 @@
     <!-- Header -->
     <header class="bg-white shadow-lg sticky top-0 z-50">
         <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
             <a href="index.html" class="text-2xl sm:text-3xl font-bold text-primary hover:text-blue-700 transition-colors">
                 Z3Connect
                 <!-- <img src="assets/images/logo.png" alt="Z3Connect Logo" class="h-8 sm:h-10"> -->
             </a>
-            <!-- Mobile Menu Button (Hidden on md and up) -->
             <div class="md:hidden">
                 <button id="mobile-menu-button" class="text-darkText focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
-            <!-- Desktop Navigation (Hidden on sm and down) -->
             <nav class="hidden md:flex space-x-3 lg:space-x-4 items-center">
                 <a href="#opportunity" class="text-mediumText hover:text-primary transition-colors px-2 py-1">The Opportunity</a>
                 <a href="#benefits" class="text-mediumText hover:text-primary transition-colors px-2 py-1">Benefits</a>
@@ -68,7 +64,6 @@
                 </a>
             </nav>
         </div>
-        <!-- Mobile Menu (Initially hidden) -->
         <div id="mobile-menu" class="md:hidden hidden bg-white shadow-md">
             <a href="#opportunity" class="block text-mediumText hover:text-primary px-4 py-3 border-b">The Opportunity</a>
             <a href="#benefits" class="block text-mediumText hover:text-primary px-4 py-3 border-b">Benefits</a>
@@ -79,8 +74,7 @@
 
     <!-- Hero Section -->
     <section class="hero-bg-image relative text-white">
-        <!-- Overlay for better text readability -->
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-black opacity-60"></div>
         <div class="container mx-auto px-4 sm:px-6 py-24 sm:py-32 text-center relative z-10">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
                 Join Z3Connect: Earn On Your Terms!
@@ -95,25 +89,100 @@
     </section>
 
     <main class="container mx-auto px-4 sm:px-6 py-12 sm:py-16">
-        <!-- Section 1: What is the Opportunity? -->
-        <section id="opportunity" class="mb-16 sm:mb-20 scroll-mt-20">
-            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 bg-white p-6 sm:p-8 md:p-10 rounded-xl shadow-xl">
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl sm:text-4xl font-semibold text-darkText mb-4">
-                        Your Chance to <span class="text-primary">Thrive with Z3Connect</span>
-                    </h2>
-                    <p class="text-mediumText mb-4 text-base sm:text-lg leading-relaxed">
-                        Z3Connect is actively seeking motivated individuals for our **Commission-Based Sales Agent program**. Your role involves promoting our diverse digital services—websites, custom software, AI solutions, and more—to businesses and individuals.
-                    </p>
-                    <p class="text-mediumText text-base sm:text-lg leading-relaxed">
-                        This fully remote, part-time role offers high earning potential based on your sales performance. It's an ideal opportunity to control your income and grow with a forward-thinking tech company.
-                    </p>
-                </div>
-                <div class="md:w-1/2">
-                    <img src="https://via.placeholder.com/600x400/007bff/ffffff?text=Team+Collaboration" alt="Illustrative image of opportunity or team" class="rounded-lg shadow-md w-full h-auto">
+
+        <!-- Section 1: What is the Opportunity? (Point-by-Point Style) -->
+        <section id="opportunity" class="mb-16 sm:mb-20 scroll-mt-20 py-12 bg-gradient-to-br from-sky-50 to-indigo-100 rounded-xl shadow-xl overflow-hidden">
+            <div class="container mx-auto px-4 sm:px-6">
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
+
+                    <!-- Text Content - Point by Point -->
+                    <div class="lg:w-3/5 order-2 lg:order-1">
+                        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-darkText mb-8 leading-tight text-center lg:text-left">
+                            Unlock Your Potential with <span class="text-primary">Z3Connect</span>
+                        </h2>
+                        <p class="text-mediumText text-lg sm:text-xl mb-8 leading-relaxed text-center lg:text-left">
+                            Z3Connect invites ambitious individuals to join our innovative team. As a Commission-Based Sales Agent, you'll champion cutting-edge digital solutions. Here’s what this exciting opportunity entails:
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- Point 1 -->
+                            <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="flex-shrink-0">
+                                    <span class="text-3xl text-primary">🚀</span> <!-- Replace with SVG icon if desired -->
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-xl font-semibold text-darkText mb-1">Promote In-Demand Services</h3>
+                                    <p class="text-mediumText text-base leading-relaxed">
+                                        Showcase and sell a diverse portfolio of digital services: custom websites, web applications, e-commerce platforms, AI chatbots, bespoke software, and more.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Point 2 -->
+                            <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="flex-shrink-0">
+                                    <span class="text-3xl text-green-500">💰</span> <!-- Replace with SVG icon if desired -->
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-xl font-semibold text-darkText mb-1">Performance-Based Earnings</h3>
+                                    <p class="text-mediumText text-base leading-relaxed">
+                                        This is a high-potential, commission-only role. Your income is directly tied to your sales success – the more you sell, the more you earn.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Point 3 -->
+                            <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="flex-shrink-0">
+                                    <span class="text-3xl text-yellow-500">🌐</span> <!-- Replace with SVG icon if desired -->
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-xl font-semibold text-darkText mb-1">Total Flexibility & Remote Work</h3>
+                                    <p class="text-mediumText text-base leading-relaxed">
+                                        Enjoy the freedom of a 100% remote, part-time role. Set your own hours and work from anywhere, fitting this opportunity around your life.
+                                    </p>
+                                </div>
+                            </div>
+
+                             <!-- Point 4 -->
+                             <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                                <div class="flex-shrink-0">
+                                    <span class="text-3xl text-red-500">📈</span> <!-- Replace with SVG icon if desired -->
+                                </div>
+                                <div class="ml-5">
+                                    <h3 class="text-xl font-semibold text-darkText mb-1">Growth & Development</h3>
+                                    <p class="text-mediumText text-base leading-relaxed">
+                                        Gain invaluable sales experience, receive training and support, and grow professionally alongside a forward-thinking tech company.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-10 text-center lg:text-left">
+                            <a href="#application-form" class="inline-block bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-10 rounded-lg text-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                                Apply & Start Earning
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Image Content -->
+                    <div class="lg:w-2/5 order-1 lg:order-2 mt-8 lg:mt-0">
+                        <div class="relative group rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-5">
+                             <!-- Replace with your actual image -->
+                            <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3MlMjBwYXJ0bmVyc2hpcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=80"
+                                 alt="A professional collaborating with Z3Connect"
+                                 class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-black/50"></div>
+                            <div class="absolute bottom-0 left-0 p-6 w-full">
+                                <h3 class="text-white text-2xl font-bold leading-tight">Partner with Innovation.</h3>
+                                <p class="text-gray-100 text-sm mt-1">Drive success with Z3Connect's digital solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
+
 
         <!-- Section 2: Why Join Z3Connect? (Benefits) -->
         <section id="benefits" class="mb-16 sm:mb-20 scroll-mt-20">
@@ -123,32 +192,32 @@
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 <!-- Benefit Items -->
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">💰</div>
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">💰</div> <!-- Replace emoji with SVG icon if desired -->
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">High Commissions</h3>
                     <p class="text-mediumText text-sm sm:text-base">Performance-based earnings. Sell more, earn more!</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">🌍</div>
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">🌍</div> <!-- Replace emoji with SVG icon if desired -->
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Work From Anywhere</h3>
                     <p class="text-mediumText text-sm sm:text-base">Complete remote freedom. Work from home or your preferred location.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">🕒</div>
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">🕒</div> <!-- Replace emoji with SVG icon if desired -->
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Flexible Hours</h3>
                     <p class="text-mediumText text-sm sm:text-base">Set your own schedule. Balance work with your commitments.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">🚀</div>
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">🚀</div> <!-- Replace emoji with SVG icon if desired -->
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">No Experience Needed</h3>
                     <p class="text-mediumText text-sm sm:text-base">Enthusiasm and communication skills are key. We welcome all.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">📚</div>
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">📚</div> <!-- Replace emoji with SVG icon if desired -->
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Training & Support</h3>
                     <p class="text-mediumText text-sm sm:text-base">Comprehensive materials and ongoing support to ensure your success.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">📄</div>
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">📄</div> <!-- Replace emoji with SVG icon if desired -->
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Valuable Experience</h3>
                     <p class="text-mediumText text-sm sm:text-base">Gain sales experience and a certificate recognizing your work.</p>
                 </div>
@@ -160,7 +229,8 @@
           <div class="container mx-auto px-4 sm:px-6">
             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                 <div class="lg:w-1/2">
-                    <img src="https://via.placeholder.com/600x500/6c757d/ffffff?text=Diverse+Individuals+Working" alt="Diverse group of people working" class="rounded-lg shadow-md w-full h-auto">
+                    <img src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGl2ZXJzZSUyMHRlYW18ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                         alt="Diverse group of people working and collaborating" class="rounded-lg shadow-md w-full h-auto object-cover aspect-video">
                 </div>
                 <div class="lg:w-1/2">
                     <h2 class="text-3xl sm:text-4xl font-semibold text-darkText mb-6 text-center lg:text-left">
@@ -250,28 +320,23 @@
     </footer>
 
     <script>
-        // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-        // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
 
-        // Smooth scroll for anchor links (both desktop and mobile nav)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
-                // Ensure it's an internal link and not just "#"
                 if (href.length > 1 && href.startsWith('#')) {
                     e.preventDefault();
                     const targetId = href;
