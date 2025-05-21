@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z3Connect Commission Agent Program</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Optional: Link to your custom CSS if you have one -->
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
+    <script>
+        // Optional: You can configure Tailwind defaults here if using the CDN
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#007bff',     // A nice blue, adjust as needed
+                secondary: '#6c757d',   // A standard grey
+                accent: '#ffc107',      // A vibrant yellow/gold for CTAs
+                lightBlue: '#e0f2fe',   // A very light blue for backgrounds
+                darkText: '#1f2937',    // Dark grey for text
+                mediumText: '#4b5563',  // Medium grey for text
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        /* Basic scroll-behavior for smooth anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Optional: Custom font import if desired - example with Inter */
+        /* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'); */
+        /* body { font-family: 'Inter', sans-serif; } */
+    </style>
+</head>
+<body class="bg-gray-50 text-darkText font-sans leading-relaxed tracking-normal">
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="text-3xl font-bold text-primary hover:text-blue-700 transition-colors">
+                Z3Connect
+                <!-- If you have a logo image: -->
+                <!-- <img src="assets/images/logo.png" alt="Z3Connect Logo" class="h-10"> -->
+            </a>
+            <nav class="space-x-4">
+                <a href="#opportunity" class="text-mediumText hover:text-primary transition-colors">The Opportunity</a>
+                <a href="#benefits" class="text-mediumText hover:text-primary transition-colors">Benefits</a>
+                <a href="#application-form" class="bg-accent hover:bg-yellow-500 text-gray-800 font-semibold py-2 px-4 rounded-md transition-colors">
+                    Apply Now
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-24 px-6 text-center">
+        <div class="container mx-auto">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Become a Z3Connect Commission Agent!
+            </h1>
+            <p class="text-lg md:text-2xl mb-10 max-w-3xl mx-auto">
+                Unlock Your Earning Potential. Promote In-Demand Digital Solutions. Work From Anywhere, On Your Own Schedule.
+            </p>
+            <a href="#application-form" class="bg-accent hover:bg-yellow-500 text-gray-800 font-bold py-4 px-10 rounded-lg text-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                Start Earning Today
+            </a>
+        </div>
+    </section>
+
+    <main class="container mx-auto px-6 py-16">
+        <!-- Section 1: What is the Opportunity? -->
+        <section id="opportunity" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-semibold text-darkText mb-8 text-center">
+                Your Chance to <span class="text-primary">Earn with Z3Connect</span>
+            </h2>
+            <div class="bg-white p-8 md:p-10 rounded-xl shadow-xl">
+                <p class="text-mediumText mb-6 text-lg leading-relaxed">
+                    Z3Connect is actively seeking motivated and enthusiastic individuals to join our dynamic team as **Commission-Based Sales Agents**. Your primary role will be to leverage your network and skills to promote and facilitate sales of our comprehensive suite of cutting-edge digital services. This includes websites, custom web applications, e-commerce platforms, bespoke software solutions, intelligent AI chatbots, and more, catering to both businesses and individual clients.
+                </p>
+                <p class="text-mediumText text-lg leading-relaxed">
+                    This is a fantastic **part-time, fully remote opportunity** designed to let you earn based directly on your performance. While there's no fixed salary, the potential for high earnings is significant, tied directly to the sales you generate. It’s a chance to be your own boss and grow with a forward-thinking tech company.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 2: Why Join Z3Connect? (Benefits) -->
+        <section id="benefits" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-semibold text-darkText mb-12 text-center">
+                <span class="text-primary">Perks</span> of Becoming a Z3Connect Agent
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Benefit Item 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="text-primary text-5xl mb-4">💰</div>
+                    <h3 class="text-2xl font-semibold text-darkText mb-3">High Commissions</h3>
+                    <p class="text-mediumText">Earn attractive, performance-based commissions on every successful sale. The more you sell, the more you earn!</p>
+                </div>
+                <!-- Benefit Item 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="text-primary text-5xl mb-4">🌍</div>
+                    <h3 class="text-2xl font-semibold text-darkText mb-3">Work From Anywhere</h3>
+                    <p class="text-mediumText">Enjoy complete freedom. Work remotely from your home, a co-working space, or anywhere with an internet connection.</p>
+                </div>
+                <!-- Benefit Item 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="text-primary text-5xl mb-4">🕒</div>
+                    <h3 class="text-2xl font-semibold text-darkText mb-3">Flexible Hours</h3>
+                    <p class="text-mediumText">Set your own schedule and work at your own pace. Perfectly fit this opportunity around your existing commitments.</p>
+                </div>
+                <!-- Benefit Item 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="text-primary text-5xl mb-4">🚀</div>
+                    <h3 class="text-2xl font-semibold text-darkText mb-3">No Experience Needed</h3>
+                    <p class="text-mediumText">We welcome everyone! Enthusiasm and basic communication skills are all you need to get started with us.</p>
+                </div>
+                <!-- Benefit Item 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="text-primary text-5xl mb-4">📚</div>
+                    <h3 class="text-2xl font-semibold text-darkText mb-3">Training & Support</h3>
+                    <p class="text-mediumText">Receive comprehensive training materials (PDFs, guidance) and continuous support to help you succeed.</p>
+                </div>
+                <!-- Benefit Item 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
+                    <div class="text-primary text-5xl mb-4">📄</div>
+                    <h3 class="text-2xl font-semibold text-darkText mb-3">Certificate of Experience</h3>
+                    <p class="text-mediumText">Gain valuable sales experience and receive a certificate recognizing your contribution after a defined performance period.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Who Can Apply? -->
+        <section id="who-can-apply" class="mb-20 scroll-mt-20">
+            <h2 class="text-3xl md:text-4xl font-semibold text-darkText mb-8 text-center">
+                Is This <span class="text-primary">Opportunity For You?</span>
+            </h2>
+            <div class="bg-white p-8 md:p-10 rounded-xl shadow-xl max-w-3xl mx-auto">
+                <p class="text-mediumText mb-6 text-lg">We are looking for individuals who are:</p>
+                <ul class="list-none space-y-3 text-mediumText text-lg">
+                    <li class="flex items-center"><span class="text-green-500 mr-3 text-xl">✓</span>Students seeking part-time income and real-world experience.</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3 text-xl">✓</span>Freelancers looking to diversify their income streams.</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3 text-xl">✓</span>Homemakers wanting to earn flexibly from the comfort of home.</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3 text-xl">✓</span>Part-time or full-time employees aiming for extra earnings.</li>
+                    <li class="flex items-center"><span class="text-green-500 mr-3 text-xl">✓</span>Anyone with a passion for sales, good communication skills, and a drive to succeed based on results.</li>
+                </ul>
+                <p class="text-darkText mt-6 font-semibold text-lg">Essential: Access to a smartphone/laptop and a reliable internet connection.</p>
+            </div>
+        </section>
+
+        <!-- Section 4: How It Works -->
+        <section id="how-it-works" class="mb-20 scroll-mt-20 bg-lightBlue py-16 rounded-xl">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-semibold text-darkText mb-12 text-center">
+                    Getting Started is <span class="text-primary">Simple</span>
+                </h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-5 text-2xl font-bold shadow-md">1</div>
+                        <h3 class="text-xl font-semibold text-darkText mb-2">Apply Online</h3>
+                        <p class="text-mediumText text-sm">Click the "Apply Now" button and fill out our quick and easy application form.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-5 text-2xl font-bold shadow-md">2</div>
+                        <h3 class="text-xl font-semibold text-darkText mb-2">Get Trained</h3>
+                        <p class="text-mediumText text-sm">Once selected, you'll receive our training materials and all you need to know about our services.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-5 text-2xl font-bold shadow-md">3</div>
+                        <h3 class="text-xl font-semibold text-darkText mb-2">Promote & Sell</h3>
+                        <p class="text-mediumText text-sm">Start promoting Z3Connect services to your network, social media, and potential clients.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
+                        <div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-5 text-2xl font-bold shadow-md">4</div>
+                        <h3 class="text-xl font-semibold text-darkText mb-2">Earn Commissions</h3>
+                        <p class="text-mediumText text-sm">Get paid for every successful deal you close! We offer clear commission structures and timely payouts.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Application Form CTA -->
+        <section id="application-form" class="mb-16 py-16 bg-gradient-to-r from-green-400 to-blue-500 text-white rounded-xl shadow-xl scroll-mt-20">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                    Ready to Take Control of Your Income?
+                </h2>
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+                    Don't miss this opportunity to partner with Z3Connect and build a rewarding income stream on your own terms.
+                    Click the button below to fill out the application form. We're excited to hear from you!
+                </p>
+                <a href="YOUR_GOOGLE_FORM_LINK_HERE" target="_blank" class="bg-white hover:bg-gray-100 text-green-600 font-bold py-4 px-12 rounded-lg text-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105 inline-block">
+                    Apply to Become a Z3Connect Agent
+                </a>
+                <p class="text-sm text-gray-200 mt-6">
+                    Alternatively, you can WhatsApp your interest to: <strong class="text-white">8110960489</strong>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-darkText text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                 <!-- Logo again if desired -->
+                 <a href="index.html" class="text-2xl font-bold text-white hover:text-primary transition-colors">Z3Connect</a>
+            </div>
+            <p class="mb-4">
+                Have Questions? Contact us via WhatsApp: <strong class="text-white">8110960489</strong>
+            </p>
+            <!-- Add email if you have one:
+            <p class="mb-4">
+                Email: <a href="mailto:your-email@example.com" class="text-primary hover:underline">your-email@example.com</a>
+            </p>
+            -->
+            <div class="mb-6 space-x-4">
+                <a href="privacy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+                <span class="text-gray-500">|</span>
+                <a href="terms.html" class="hover:text-white transition-colors">Terms & Conditions</a>
+                <span class="text-gray-500">|</span>
+                <a href="agent-policy.html" class="hover:text-white transition-colors">Agent Policy</a>
+            </div>
+            <p class="text-sm">© <span id="currentYear"></span> Z3Connect. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Simple smooth scroll for anchor links in the nav
+        document.querySelectorAll('header nav a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Consider header height if it's sticky and fixed
+                    const headerOffset = document.querySelector('header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
