@@ -39,12 +39,26 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+        /* Chatbot scrollbar styling (optional) */
+        #chatbot-messages::-webkit-scrollbar {
+            width: 6px;
+        }
+        #chatbot-messages::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        #chatbot-messages::-webkit-scrollbar-thumb {
+            background: #007bff; /* primary color */
+            border-radius: 3px;
+        }
+        #chatbot-messages::-webkit-scrollbar-thumb:hover {
+            background: #0056b3; /* darker primary */
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-darkText leading-relaxed tracking-tight">
 
     <!-- Header -->
-    <header class="bg-white shadow-lg sticky top-0 z-50">
+    <header class="bg-white shadow-lg sticky top-0 z-40"> <!-- z-index lower than chatbot -->
         <div class="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl sm:text-3xl font-bold text-primary hover:text-blue-700 transition-colors">
                 Z3Connect
@@ -95,7 +109,6 @@
             <div class="container mx-auto px-4 sm:px-6">
                 <div class="flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-16">
 
-                    <!-- Text Content - Point by Point -->
                     <div class="lg:w-3/5 order-2 lg:order-1">
                         <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-darkText mb-8 leading-tight text-center lg:text-left">
                             Unlock Your Potential with <span class="text-primary">Z3Connect</span>
@@ -103,13 +116,9 @@
                         <p class="text-mediumText text-lg sm:text-xl mb-8 leading-relaxed text-center lg:text-left">
                             Z3Connect invites ambitious individuals to join our innovative team. As a Commission-Based Sales Agent, you'll champion cutting-edge digital solutions. Here’s what this exciting opportunity entails:
                         </p>
-
                         <div class="space-y-6">
-                            <!-- Point 1 -->
                             <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex-shrink-0">
-                                    <span class="text-3xl text-primary">🚀</span> <!-- Replace with SVG icon if desired -->
-                                </div>
+                                <div class="flex-shrink-0 text-3xl text-primary">🚀</div>
                                 <div class="ml-5">
                                     <h3 class="text-xl font-semibold text-darkText mb-1">Promote In-Demand Services</h3>
                                     <p class="text-mediumText text-base leading-relaxed">
@@ -117,12 +126,8 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Point 2 -->
                             <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex-shrink-0">
-                                    <span class="text-3xl text-green-500">💰</span> <!-- Replace with SVG icon if desired -->
-                                </div>
+                                <div class="flex-shrink-0 text-3xl text-green-500">💰</div>
                                 <div class="ml-5">
                                     <h3 class="text-xl font-semibold text-darkText mb-1">Performance-Based Earnings</h3>
                                     <p class="text-mediumText text-base leading-relaxed">
@@ -130,12 +135,8 @@
                                     </p>
                                 </div>
                             </div>
-
-                            <!-- Point 3 -->
                             <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex-shrink-0">
-                                    <span class="text-3xl text-yellow-500">🌐</span> <!-- Replace with SVG icon if desired -->
-                                </div>
+                                <div class="flex-shrink-0 text-3xl text-yellow-500">🌐</div>
                                 <div class="ml-5">
                                     <h3 class="text-xl font-semibold text-darkText mb-1">Total Flexibility & Remote Work</h3>
                                     <p class="text-mediumText text-base leading-relaxed">
@@ -143,12 +144,8 @@
                                     </p>
                                 </div>
                             </div>
-
-                             <!-- Point 4 -->
                              <div class="flex items-start p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex-shrink-0">
-                                    <span class="text-3xl text-red-500">📈</span> <!-- Replace with SVG icon if desired -->
-                                </div>
+                                <div class="flex-shrink-0 text-3xl text-red-500">📈</div>
                                 <div class="ml-5">
                                     <h3 class="text-xl font-semibold text-darkText mb-1">Growth & Development</h3>
                                     <p class="text-mediumText text-base leading-relaxed">
@@ -163,11 +160,8 @@
                             </a>
                         </div>
                     </div>
-
-                    <!-- Image Content -->
                     <div class="lg:w-2/5 order-1 lg:order-2 mt-8 lg:mt-0">
                         <div class="relative group rounded-xl overflow-hidden shadow-2xl aspect-w-4 aspect-h-5">
-                             <!-- Replace with your actual image -->
                             <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YnVzaW5lc3MlMjBwYXJ0bmVyc2hpcHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=700&q=80"
                                  alt="A professional collaborating with Z3Connect"
                                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
@@ -178,11 +172,9 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
-
 
         <!-- Section 2: Why Join Z3Connect? (Benefits) -->
         <section id="benefits" class="mb-16 sm:mb-20 scroll-mt-20">
@@ -190,34 +182,33 @@
                 Agent <span class="text-primary">Advantages</span> with Z3Connect
             </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                <!-- Benefit Items -->
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">💰</div> <!-- Replace emoji with SVG icon if desired -->
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">💰</div>
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">High Commissions</h3>
                     <p class="text-mediumText text-sm sm:text-base">Performance-based earnings. Sell more, earn more!</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">🌍</div> <!-- Replace emoji with SVG icon if desired -->
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">🌍</div>
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Work From Anywhere</h3>
                     <p class="text-mediumText text-sm sm:text-base">Complete remote freedom. Work from home or your preferred location.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">🕒</div> <!-- Replace emoji with SVG icon if desired -->
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">🕒</div>
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Flexible Hours</h3>
                     <p class="text-mediumText text-sm sm:text-base">Set your own schedule. Balance work with your commitments.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">🚀</div> <!-- Replace emoji with SVG icon if desired -->
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">🚀</div>
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">No Experience Needed</h3>
                     <p class="text-mediumText text-sm sm:text-base">Enthusiasm and communication skills are key. We welcome all.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">📚</div> <!-- Replace emoji with SVG icon if desired -->
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">📚</div>
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Training & Support</h3>
                     <p class="text-mediumText text-sm sm:text-base">Comprehensive materials and ongoing support to ensure your success.</p>
                 </div>
                 <div class="bg-white p-6 sm:p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300 flex flex-col items-center text-center">
-                    <div class="text-primary text-4xl sm:text-5xl mb-3">📄</div> <!-- Replace emoji with SVG icon if desired -->
+                    <div class="text-primary text-4xl sm:text-5xl mb-3">📄</div>
                     <h3 class="text-xl sm:text-2xl font-semibold text-darkText mb-2">Valuable Experience</h3>
                     <p class="text-mediumText text-sm sm:text-base">Gain sales experience and a certificate recognizing your work.</p>
                 </div>
@@ -255,7 +246,6 @@
                 Getting Started is <span class="text-primary">Easy</span>
             </h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-                <!-- Step Items -->
                 <div class="bg-white p-6 rounded-lg shadow-lg text-center transform hover:scale-105 transition-transform duration-300">
                     <div class="bg-primary text-white rounded-full w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center mx-auto mb-4 text-xl sm:text-2xl font-bold shadow-md">1</div>
                     <h3 class="text-lg sm:text-xl font-semibold text-darkText mb-2">Apply Online</h3>
@@ -319,21 +309,58 @@
         </div>
     </footer>
 
+    <!-- Chatbot Start -->
+    <div id="chatbot-container" class="fixed bottom-5 right-5 z-50">
+        <button id="chatbot-bubble" class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-blue-700 transition-colors focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.892 8.892 0 01-2.647-.472c-.412-.102-.82-.296-1.175-.552l-1.38.46a.5.5 0 01-.633-.633l.46-1.38c-.256-.355-.45-.763-.552-1.175A8.892 8.892 0 012 10c0-4.418 3.582-8 8-8s8 3.582 8 8zm-2.929-2.929A4.982 4.982 0 0010 6a4.982 4.982 0 00-5.071 1.071A4.992 4.992 0 003 10c0 .995.293 1.92.805 2.695A4.992 4.992 0 0010 14a4.992 4.992 0 005.195-2.305A4.992 4.992 0 0017 10a4.982 4.982 0 00-1.071-3.071zM9 9a1 1 0 011-1h0a1 1 0 011 1v2a1 1 0 01-1 1h0a1 1 0 01-1-1V9zm2-1a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+            </svg>
+        </button>
+        <div id="chatbot-window" class="hidden fixed bottom-20 right-5 w-80 sm:w-96 bg-white rounded-lg shadow-xl border border-gray-300 flex flex-col" style="height: 500px;">
+            <div class="bg-primary text-white p-3 flex justify-between items-center rounded-t-lg">
+                <h3 class="font-semibold text-lg">Z3Connect Help</h3>
+                <button id="chatbot-close" class="text-white hover:text-gray-200 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div id="chatbot-messages" class="flex-1 p-4 space-y-3 overflow-y-auto">
+                <div class="flex">
+                    <div class="bg-gray-200 text-darkText p-3 rounded-lg max-w-xs">
+                        Hi there! How can I help you today? Ask me about our services, application process, or commissions.
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 border-t border-gray-200 flex items-center bg-gray-50 rounded-b-lg">
+                <input type="text" id="chatbot-input" placeholder="Ask a question..." class="flex-1 p-2 border border-gray-300 rounded-l-md focus:ring-primary focus:border-primary outline-none">
+                <button id="chatbot-send" class="bg-primary text-white p-2 rounded-r-md hover:bg-blue-700 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Chatbot End -->
+
     <script>
+        // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
 
+        // Mobile Menu Toggle
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
             });
-        });
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
 
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -342,7 +369,8 @@
                     const targetId = href;
                     const targetElement = document.querySelector(targetId);
                     if (targetElement) {
-                        const headerOffset = document.querySelector('header').offsetHeight;
+                        const header = document.querySelector('header');
+                        const headerOffset = header ? header.offsetHeight : 0;
                         const elementPosition = targetElement.getBoundingClientRect().top;
                         const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -354,6 +382,124 @@
                 }
             });
         });
+
+        // Chatbot Logic
+        const chatbotBubble = document.getElementById('chatbot-bubble');
+        const chatbotWindow = document.getElementById('chatbot-window');
+        const chatbotClose = document.getElementById('chatbot-close');
+        const chatbotMessages = document.getElementById('chatbot-messages');
+        const chatbotInput = document.getElementById('chatbot-input');
+        const chatbotSend = document.getElementById('chatbot-send');
+
+        // --- IMPORTANT: CUSTOMIZE YOUR Q&A PAIRS HERE ---
+        const qaPairs = {
+            "hello": "Hi there! How can I assist you with Z3Connect?",
+            "hi": "Hello! What can I help you with regarding our agent program?",
+            "what services": "We offer a range of digital solutions including website development, web applications, e-commerce platforms, custom software, AI chatbots, and more. Agents help promote these.",
+            "services": "Our agents promote digital services like websites, web apps, custom software, and AI solutions.",
+            "apply": "You can apply by clicking the 'Apply Now' or 'Apply to be a Z3Connect Agent' button on this page. It will take you to our application form.",
+            "how to apply": "Simply click any 'Apply Now' button on the page to access the application form.",
+            "commission": "Agents earn a high commission based on the project size and performance. Specific rates are discussed during onboarding.",
+            "salary": "This is a commission-based role, so there's no fixed salary. Your earnings depend on your sales performance.",
+            "experience": "No prior sales experience is necessary! We provide training and support materials. Basic communication skills are what you need.",
+            "training": "Yes, we provide complete training materials (like PDFs and guidance) and ongoing support to our agents.",
+            "contact": "You can contact us via WhatsApp at 8110960489 for any further questions.",
+            "location": "This is a fully remote opportunity. You can work from anywhere!",
+            "remote": "Yes, this is a 100% remote position.",
+            "hours": "You can set your own flexible working hours. It's a part-time opportunity.",
+            "bye": "Goodbye! Feel free to reach out if you have more questions.",
+            "thank you": "You're welcome! Let me know if there's anything else.",
+            "thanks": "You're welcome!",
+            // Add more specific Q&A pairs below
+            "what is z3connect": "Z3Connect is a company that provides innovative digital solutions to businesses and individuals.",
+            "payout": "Commissions are typically paid out on a [mention your payout cycle, e.g., bi-weekly or monthly] basis via bank transfer or UPI.",
+            "support": "We offer ongoing support to our agents through WhatsApp and email, along with comprehensive training materials.",
+            "requirements": "The main requirements are basic communication skills, access to a smartphone/laptop, and an internet connection. No specific educational background is mandatory, but enthusiasm is key!"
+        };
+        // --- END OF Q&A PAIRS CUSTOMIZATION ---
+
+
+        if (chatbotBubble && chatbotWindow && chatbotClose && chatbotMessages && chatbotInput && chatbotSend) {
+            chatbotBubble.addEventListener('click', () => {
+                chatbotWindow.classList.toggle('hidden');
+                if (!chatbotWindow.classList.contains('hidden')) {
+                    chatbotInput.focus();
+                }
+            });
+
+            chatbotClose.addEventListener('click', () => {
+                chatbotWindow.classList.add('hidden');
+            });
+
+            function addMessageToChat(message, sender = 'user') {
+                const messageDiv = document.createElement('div');
+                messageDiv.classList.add('flex', 'mb-2');
+                if (sender === 'user') {
+                    messageDiv.classList.add('justify-end');
+                    messageDiv.innerHTML = `<div class="bg-primary text-white p-3 rounded-lg max-w-xs break-words">${escapeHTML(message)}</div>`;
+                } else { // bot
+                    messageDiv.innerHTML = `<div class="bg-gray-200 text-darkText p-3 rounded-lg max-w-xs break-words">${escapeHTML(message)}</div>`;
+                }
+                chatbotMessages.appendChild(messageDiv);
+                chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+            }
+            
+            // Simple HTML escaping function
+            function escapeHTML(str) {
+                return str.replace(/[&<>"']/g, function (match) {
+                    return {
+                        '&': '&',
+                        '<': '<',
+                        '>': '>',
+                        '"': '"',
+                        "'": '''
+                    }[match];
+                });
+            }
+
+            function getBotResponse(userInput) {
+                const lowerInput = userInput.toLowerCase().trim();
+                for (const question in qaPairs) {
+                    // More flexible matching: check if any part of the question keyword is in the user input
+                    const keywords = question.split(" ");
+                    let matchCount = 0;
+                    keywords.forEach(keyword => {
+                        if (lowerInput.includes(keyword)) {
+                            matchCount++;
+                        }
+                    });
+                    // Require a certain threshold of keyword matches if question has multiple words
+                    if (keywords.length > 1 && matchCount >= Math.ceil(keywords.length / 2)) {
+                         return qaPairs[question];
+                    } else if (keywords.length === 1 && lowerInput.includes(question)) {
+                         return qaPairs[question];
+                    }
+                }
+                return "I'm sorry, I don't have an answer for that right now. Please try asking in a different way or contact us via WhatsApp at 8110960489 for more specific queries.";
+            }
+
+            function handleSend() {
+                const userInput = chatbotInput.value.trim();
+                if (userInput) {
+                    addMessageToChat(userInput, 'user');
+                    const botResponse = getBotResponse(userInput);
+                    setTimeout(() => {
+                        addMessageToChat(botResponse, 'bot');
+                    }, 500);
+                    chatbotInput.value = '';
+                }
+            }
+
+            chatbotSend.addEventListener('click', handleSend);
+            chatbotInput.addEventListener('keypress', (event) => {
+                if (event.key === 'Enter') {
+                    handleSend();
+                }
+            });
+        } else {
+            console.error("Chatbot elements not found. Check IDs.");
+        }
+
     </script>
 
 </body>
